@@ -1,0 +1,9 @@
+[package]
+name = "hello-machine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.5"
+gethostname = "0.5.0"
+tokio = { version = "1.40.0", features = ["full"] }
