@@ -3,7 +3,7 @@
 REGISTRY="${REGISTRY:-docker.io}"
 DOCKER_REPO="${DOCKER_REPO:-bb223}"
 VER="${VER:?VER is not set}"
-IMAGE_NAME=$(basename $(pwd))
+IMAGE_NAME=$(basename $(git rev-parse --show-toplevel))
 
 docker build -t ${REGISTRY}/${DOCKER_REPO}/${IMAGE_NAME}:latest .
 
